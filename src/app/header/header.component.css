@@ -1,0 +1,30 @@
+.navbar-nav{
+  margin: auto;
+  padding: 15px;
+}
+.bg-light {
+  background-color: #fff !important;
+}
+
+.nav-link{
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 0 15px;
+}
+
+.active{
+  color: cornflowerblue !important ;
+  border-top: solid 2px cornflowerblue;
+}
+
+.active a{
+  color: cornflowerblue !important ;
+}
+
+.nav-link:hover{
+  color: cornflowerblue;
+}
+
+.navbar-brand {
+  margin-left: 25px;
+}
