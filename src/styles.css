@@ -4,3 +4,26 @@
 html {
   scroll-behavior: smooth;
 }
+.cover-title{
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .cover-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+}
+.title{
+  text-align: center;
+}
+.background{
+  background-color: #F2F0EC;
+  padding: 30px;
+}
+.big-title{
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+  text-transform: capitalize;
+}
