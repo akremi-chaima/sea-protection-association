@@ -60,15 +60,7 @@
 
 
 
-.cards{
-  margin: 0 80px;
-  padding: 50px 0;
-}
-@media (max-width: 500px) {
-  .cards {
-    margin: 30px;
-  }
-}
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -85,9 +77,4 @@
 }
 
 
-.imagesss{
-  background-image: url("../../assets/images/indian-ocean-e1616165376536.webp");
-  background-size: cover;
-  position: relative;
-  border-radius: 25px;
-}
+

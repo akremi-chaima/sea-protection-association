@@ -81,47 +81,7 @@
     </div>
   </section>
 
-  <section>
-    <div class="row cards">
-      <div class="col-sm-6">
-        <h6>Contact Us</h6>
-        <h2 class="cover-title">Formulaire de contact</h2>
-        <form class="row g-3 needs-validation" novalidate id="lessonForm">
-          <div class="col-sm-12">
-            <label for="firstName" class="form-label"></label>
-            <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Entrez votre nom">
-            <div class="invalid-feedback">
-              Veuillez saisir votre prénom
-            </div>
-          </div>
-          <div class="col-sm-12">
-            <label for="email" class="form-label"></label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="Adresse email">
-            <div class="invalid-feedback">
-              Veuillez saisir votre email
-            </div>
-          </div>
-          <div class="col-sm-12">
-            <label for="phoneNumber" class="form-label"></label>
-            <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Numéro de téléphone">
-            <div class="invalid-feedback">
-              Veuillez saisir votre numéro de téléphone
-            </div>
-          </div>
-          <div class="col-sm-12">
-            <label for="message" class="form-label"></label>
-            <textarea name="message" id="message" rows="8" class="form-control" placeholder="Message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-25">Valider</button>
-        </form>
-      </div>
-      <div class="col-sm-6 imagesss">
-
-      </div>
-
-    </div>
-
-  </section>
+  <app-contact-us [hideBanner] = "true"></app-contact-us>
 </main>
 
 
