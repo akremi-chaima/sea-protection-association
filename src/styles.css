@@ -27,3 +27,13 @@ html {
   line-height: 50px;
   text-transform: capitalize;
 }
+
+.cards{
+  margin: 0 80px;
+  padding: 50px 0;
+}
+@media (max-width: 500px) {
+  .cards {
+    margin: 30px;
+  }
+}
