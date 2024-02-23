@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+    <div class="col mb-3" *ngFor="let act of news">
+      <div class="card text-center">
+        <img class="card-header" [src]="act.picture" alt="">
+        <div class="card-body">
+          <h6> <strong>{{ act.title }}</strong></h6>
+          <p>{{ act.description }}</p>
+          <small class="text-body-secondary float-end">{{ act.createdAt }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

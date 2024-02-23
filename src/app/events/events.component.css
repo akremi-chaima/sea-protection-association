@@ -1,0 +1,22 @@
+.card {
+  --bs-card-cap-padding-y: 0 !important;
+  --bs-card-cap-padding-x: 0 !important;
+}
+
+.title-news {
+  color: cornflowerblue !important;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.bi {
+  color: cornflowerblue !important;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.bi-file-person-fill {
+  font-size: 20px;
+}
+
+
