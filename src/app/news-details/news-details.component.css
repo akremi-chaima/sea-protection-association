@@ -1,0 +1,17 @@
+.cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100% !important;
+  height: 200px;
+}
+
+.cover h2 {
+  text-align: center;
+  color: white;
+  padding-top: 100px;
+}
+
+.description {
+  position: relative;
+  padding-top: 100px;
+}

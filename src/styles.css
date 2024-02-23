@@ -33,6 +33,11 @@ html {
   margin: 0 80px;
   padding: 50px 0;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 @media (max-width: 500px) {
   .cards {
     margin: 30px;
