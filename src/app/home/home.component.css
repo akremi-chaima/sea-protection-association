@@ -4,7 +4,6 @@
 
 .carousel-caption {
   top: 40%;
-  right: 40%;
   left: 10%;
 }
 @media (min-width: 300px){
@@ -56,10 +55,6 @@
    margin-bottom: 25px;
    padding-bottom: 70px;
  }
-
-
-
-
 
 .card {
   /* Add shadows to create the "card" effect */

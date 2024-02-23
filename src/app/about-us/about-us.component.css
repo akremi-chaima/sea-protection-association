@@ -1,15 +1,23 @@
+.bold-text {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .cover{
   display: flex;
   align-items: center;
 }
+
 @media (max-width: 500px) {
   .cover{
     flex-direction: column;
   }
 }
+
 .flux{
-  margin: 100px 80px;
+  margin: 50px;
 }
+
 @media (max-width: 500px) {
   .flux {
     margin-top: 80px;
@@ -19,12 +27,12 @@
 .cover-text{
   padding-right: 100px;
 }
+
 @media (max-width: 500px) {
   .cover-text {
     padding-right: 0;
   }
 }
-
 
 .cover-introduction{
   margin-bottom: 30px;
@@ -32,7 +40,7 @@
 
 
 .images{
-  background-image: url("../../assets/images/indian-ocean-e1616165376536.webp");
+  background-image: url("../../assets/images/ocean.jpg");
   height: 450px;
   background-size: cover;
   position: relative;
