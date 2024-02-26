@@ -9,6 +9,7 @@ import { EventInterface } from '../models/event.interface';
 export class EventsComponent implements OnInit {
 
   events: Array<EventInterface> = [];
+  selectedEvent: EventInterface | null = null;
 
   ngOnInit() {
     this.events = [
@@ -41,5 +42,9 @@ export class EventsComponent implements OnInit {
         participants: 15
       },
     ];
+  }
+
+  setSelectedEvent(event: EventInterface) {
+    this.selectedEvent = event;
   }
 }
