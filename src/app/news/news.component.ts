@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { NewsInterface } from '../models/news.interface';
 
 @Component({
@@ -8,7 +8,11 @@ import { NewsInterface } from '../models/news.interface';
 })
 export class NewsComponent implements OnInit {
 
+  @Input()
+  newsNumber: number;
+
   news: Array<NewsInterface> = [];
+  selectedNews: NewsInterface | null = null;
 
   ngOnInit() {
     this.news = [
@@ -55,5 +59,9 @@ export class NewsComponent implements OnInit {
         createdAt: '23/02/2024 12:12',
       }
     ];
+  }
+
+  setSelectedNews(news: NewsInterface) {
+    this.selectedNews = news;
   }
 }

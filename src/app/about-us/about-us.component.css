@@ -38,19 +38,18 @@
   margin-bottom: 30px;
 }
 
+@media (min-width: 575px){
+  .images {
+    width: 90%;
+  }
+}
+
 
 .images{
   background-image: url("../../assets/images/ocean.jpg");
-  height: 450px;
+  height: 50vw;
   background-size: cover;
   position: relative;
-  border-radius: 25px;
-}
-
-.images2{
-  padding: 290px 10px 0 0;
-  margin: -91px;
-  width: 320px;
   border-radius: 25px;
 }
 

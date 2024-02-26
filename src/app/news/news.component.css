@@ -1,0 +1,25 @@
+.modal-dialog {
+  max-width: 50%;
+}
+
+.modal {
+  margin-top: 10%;
+}
+
+.modal-title {
+  text-align: center;
+  width: 100%;
+  color: cornflowerblue !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (max-width: 575px){
+  .modal {
+    margin-top: 25%;
+  }
+
+  .modal-dialog {
+    max-width: 95%;
+  }
+}

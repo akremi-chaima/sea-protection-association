@@ -10,7 +10,6 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NewsComponent } from './news/news.component';
 import { EventsComponent } from './events/events.component';
-import { NewsDetailsComponent } from './news-details/news-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { NewsDetailsComponent } from './news-details/news-details.component';
     ContactUsComponent,
     NewsComponent,
     EventsComponent,
-    NewsDetailsComponent
   ],
   imports: [
     BrowserModule,
