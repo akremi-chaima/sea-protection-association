@@ -5,14 +5,17 @@ div{
   bottom: 0;
   width: 100%;
 }
+
 span{
   color: white;
   font-size: 25px !important;
   line-height: 35px !important;
 }
+
 span:hover{
   font-size: 27px !important;
 }
+
 h5{
   color: white;
   font-weight: normal;

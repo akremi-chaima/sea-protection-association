@@ -1,12 +1,18 @@
-.imagesss{
+.image {
   background-image: url("../../assets/images/indian-ocean-e1616165376536.webp");
   background-size: cover;
   position: relative;
   border-radius: 25px;
 }
+
 .icon{
   font-size: 50px;
 }
+
 .carte{
-  margin: 80px 80px 0 80px;
+  margin: 5vw 5vw 2vw 5vw;
+}
+
+.cards {
+  padding: 0 !important;
 }
