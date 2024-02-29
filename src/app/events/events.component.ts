@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { ConstsHelper } from '../consts.helper';
 import { ParticipantInterface } from '../models/participant.interface';
+import { EventService } from '../services/event.service';
 
 @Component({
   selector: 'app-events',
@@ -40,41 +41,16 @@ export class EventsComponent implements OnInit {
   }
   constructor(
     private participantService: ParticipantService,
+    private eventService: EventService,
     private formBuilder: FormBuilder,
   ) {
   }
 
   ngOnInit() {
-    this.events = [
-      {
-        id: 2,
-        title: 'Aide pour l\'humanité',
-        address: 'Plage Prado',
-        date: '23/02/2024 12:12',
-        participants: 5
-      },
-      {
-        id: 1,
-        title: 'Aide pour l\'humanité',
-        address: 'Plage Prado',
-        date: '23/02/2024 12:12',
-        participants: 10
-      },
-      {
-        id: 1,
-        title: 'Aide pour l\'humanité',
-        address: 'Plage Prado',
-        date: '23/02/2024 12:12',
-        participants: 20
-      },
-      {
-        id: 1,
-        title: 'Aide pour l\'humanité',
-        address: 'Plage Prado',
-        date: '23/02/2024 12:12',
-        participants: 15
-      },
-    ];
+    this.events = [];
+    this.eventService.get().subscribe(events => {
+      this.events = events;
+    });
   }
 
   initForm() {
