@@ -10,6 +10,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NewsComponent } from './news/news.component';
 import { EventsComponent } from './events/events.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,10 +25,13 @@ import { EventsComponent } from './events/events.component';
     NewsComponent,
     EventsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        CommonModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -22,42 +22,35 @@
         <div class="modal-title">Participer à cet évènement</div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <div class="modal-title"><u>{{ selectedEvent.title }}</u></div>
-        <div class="row">
-          <form class="row needs-validation" novalidate id="lessonForm">
-            <div class="col-sm-12">
-              <label for="firstName" class="form-label"></label>
-              <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Entrez votre prénom">
-              <div class="invalid-feedback">
-                Veuillez saisir votre prénom
+        <div class="modal-body">
+          <div class="modal-title"><u>{{ selectedEvent.title }}</u></div>
+          <div class="row">
+            <form class="row needs-validation" [formGroup]="form" *ngIf="form" id="lessonForm">
+              <div class="col-sm-12">
+                <label for="firstName" class="form-label"></label>
+                <input type="text" class="form-control" name="firstName" formControlName="firstName" id="firstName" placeholder="Entrez votre prénom">
+                <p class="error-message" *ngIf="formSubmitted && form.controls['firstName'].errors">{{ getError('firstName') }}</p>
               </div>
-            </div>
-            <div class="col-sm-12">
-              <label for="lastName" class="form-label"></label>
-              <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Entrez votre nom">
-              <div class="invalid-feedback">
-                Veuillez saisir votre nom
+              <div class="col-sm-12">
+                <label for="lastName" class="form-label"></label>
+                <input type="text" class="form-control" name="lastName" formControlName="lastName" id="lastName" placeholder="Entrez votre nom">
+                <p class="error-message" *ngIf="formSubmitted && form.controls['lastName'].errors">{{ getError('lastName') }}</p>
               </div>
-            </div>
-            <div class="col-sm-12">
-              <label for="email" class="form-label"></label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="Entrez votre e-mail">
-              <div class="invalid-feedback">
-                Veuillez saisir votre email
+              <div class="col-sm-12">
+                <label for="email" class="form-label"></label>
+                <input type="email" class="form-control" name="email" formControlName="email" id="email" placeholder="Entrez votre e-mail">
+                <p class="error-message" *ngIf="formSubmitted && form.controls['email'].errors">{{ getError('email') }}</p>
               </div>
-            </div>
-            <div class="col-sm-12 mb-3">
-              <label for="phoneNumber" class="form-label"></label>
-              <input type="email" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Entrez votre téléphone">
-              <div class="invalid-feedback">
-                Veuillez saisir votre téléphone
+              <div class="col-sm-12 mb-3">
+                <label for="phoneNumber" class="form-label"></label>
+                <input type="email" class="form-control" name="phoneNumber" formControlName="phoneNumber" id="phoneNumber" placeholder="Entrez votre téléphone">
+                <p class="error-message" *ngIf="formSubmitted && form.controls['phoneNumber'].errors">{{ getError('phoneNumber') }}</p>
               </div>
-            </div>
-            <button type="submit" class="btn w-25 btn-primary">Envoyer</button>
-          </form>
+              <button type="submit" class="btn w-25 btn-primary" (click)="save()">Participer</button>
+              <button type="button" (click)="closeModal()">Close</button>
+            </form>
           </div>
-      </div>
+        </div>
     </div>
   </div>
 </div>
