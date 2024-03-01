@@ -1,5 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NewsInterface } from '../models/news.interface';
+import { NewsService } from '../services/news.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-news',
@@ -13,52 +15,16 @@ export class NewsComponent implements OnInit {
 
   news: Array<NewsInterface> = [];
   selectedNews: NewsInterface | null = null;
+  environment = environment
+
+  constructor(private newsService: NewsService) {
+  }
 
   ngOnInit() {
-    this.news = [
-      {
-        id: 1,
-        title: 'Aide pour l\'humanité',
-        description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots piece of classical Latin literature.',
-        picture: '../../assets/images/marine.jpeg',
-        createdAt: '23/02/2024 12:12',
-      },
-      {
-        id: 1,
-        title: 'Aide pour l\'humanité',
-        description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots piece of classical Latin literature.',
-        picture: '../../assets/images/marine.jpeg',
-        createdAt: '23/02/2024 12:12',
-      },
-      {
-        id: 1,
-        title: 'Aide pour l\'humanité',
-        description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots piece of classical Latin literature.',
-        picture: '../../assets/images/marine.jpeg',
-        createdAt: '23/02/2024 12:12',
-      },
-      {
-        id: 1,
-        title: 'Aide pour l\'humanité',
-        description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots piece of classical Latin literature.',
-        picture: '../../assets/images/marine.jpeg',
-        createdAt: '23/02/2024 12:12',
-      },
-      {
-        id: 1,
-        title: 'Aide pour l\'humanité',
-        description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots piece of classical Latin literature.',
-        picture: '../../assets/images/marine.jpeg',
-        createdAt: '23/02/2024 12:12',
-      },
-      {
-        id: 1,
-        title: 'Aide pour l\'humanité',
-        description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots piece of classical Latin literature.',
-        picture: '../../assets/images/marine.jpeg',
-        createdAt: '23/02/2024 12:12',
-      }
-    ];
+    this.news = [];
+    this.newsService.get().subscribe(news => {
+      this.news = news;
+    });
   }
 
   setSelectedNews(news: NewsInterface) {

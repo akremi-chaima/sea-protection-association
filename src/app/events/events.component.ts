@@ -76,7 +76,9 @@ export class EventsComponent implements OnInit {
     return errorMsg;
   }
 
-  closeModal() {
+  setSelectedEvent(event: EventInterface) {
+    this.selectedEvent = event;
+    this.initForm();
   }
 
   save() {

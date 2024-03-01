@@ -2,6 +2,6 @@ export interface NewsInterface {
   id: number;
   description: string;
   title: string;
-  picture: string;
+  picture: string|null;
   createdAt: string;
 }

@@ -2,10 +2,10 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
     <div class="col mb-3 cursor-pointer" *ngFor="let act of news" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setSelectedNews(act)">
       <div class="card text-center">
-        <img class="card-header" [src]="act.picture" alt="">
+        <img class="card-header" [src]="act.picture ? environment.apiUrl + act.picture : '../../assets/images/marine.jpeg'" alt="">
         <div class="card-body">
           <h6> <strong>{{ act.title }}</strong></h6>
-          <p>{{ act.description }}</p>
+          <p>{{ act.description.substring(0, 100) }}...</p>
           <small class="text-body-secondary float-end">{{ act.createdAt }}</small>
         </div>
       </div>
@@ -21,8 +21,7 @@
         <div class="modal-title">{{ selectedNews.title }}</div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        {{ selectedNews.description }}
+      <div class="modal-body" [innerHTML]="selectedNews.description.replace('\n', '<br>')">
       </div>
     </div>
   </div>

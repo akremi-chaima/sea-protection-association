@@ -47,7 +47,6 @@
                 <p class="error-message" *ngIf="formSubmitted && form.controls['phoneNumber'].errors">{{ getError('phoneNumber') }}</p>
               </div>
               <button type="submit" class="btn w-25 btn-primary" (click)="save()">Participer</button>
-              <button type="button" (click)="closeModal()">Close</button>
             </form>
           </div>
         </div>

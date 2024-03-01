@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiService } from './api.service';
-import { EventInterface } from '../models/event.interface';
+import { NewsInterface } from '../models/news.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EventService {
+export class NewsService {
   constructor(private apiService: ApiService) {}
 
   /**
-   * Get events
+   * Get news
    */
-  get(): Observable<Array<EventInterface>> {
-    return this.apiService.get<Array<EventInterface>>('events');
+  get(): Observable<Array<NewsInterface>> {
+    return this.apiService.get<Array<NewsInterface>>('news');
   }
 }
