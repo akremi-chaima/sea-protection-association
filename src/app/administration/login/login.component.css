@@ -1,0 +1,31 @@
+.card-signin {
+  border-radius: 32px;
+  background: #f6f6f9;
+  padding: 30px 30px;
+  width: 60%;
+  margin: 170px auto;
+  display: flex;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin form {
+  width: 80%;
+  margin: auto;
+}
+
+a {
+  color: cornflowerblue !important;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .card-signin {
+    width: 95%;
+  }
+
+  .card-signin form {
+    width: 95%;
+  }
+}

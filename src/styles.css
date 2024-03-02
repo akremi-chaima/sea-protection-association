@@ -50,3 +50,9 @@ html {
   font-size: 13px;
   margin-bottom: 0 !important;
 }
+
+.btn-primary {
+  display: block;
+  margin: auto;
+  text-align: center !important;
+}

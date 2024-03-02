@@ -5,7 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav" *ngIf="!router.url.includes('administration')">
         <li class="nav-item" [className]="router.url == '/' ? 'active' : ''">
           <a class="nav-link " routerLink="/">Accueil</a>
         </li>
@@ -17,6 +17,21 @@
         </li>
         <li class="nav-item" [className]="router.url.includes('contact-us') ? 'active' : ''">
           <a class="nav-link" routerLink="/contact-us">Nous rejoindre</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav" *ngIf="router.url.includes('administration') && !router.url.includes('login')">
+        <li class="nav-item" [className]="router.url.includes('news') ? 'active' : ''">
+          <a class="nav-link" routerLink="administration/news">Actualités</a>
+        </li>
+        <li class="nav-item" [className]="router.url.includes('events') ? 'active' : ''">
+          <a class="nav-link" routerLink="administration/events">Évènements</a>
+        </li>
+        <li class="nav-item" [className]="router.url.includes('password') ? 'active' : ''">
+          <a class="nav-link" routerLink="administration/update/password">Modifier mot de passe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link cursor-pointer"(click)="logout()">Déconnexion</a>
         </li>
       </ul>
     </div>

@@ -12,4 +12,9 @@ export class HeaderComponent {
     public router: Router,
   ) {
   }
+
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['administration/login']);
+  }
 }

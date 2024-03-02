@@ -5,6 +5,11 @@ import { AboutUsComponent } from './visitor/about-us/about-us.component';
 import { ContactUsComponent } from './visitor/contact-us/contact-us.component';
 import { NewsComponent } from './visitor/news/news.component';
 import { EventsComponent } from './visitor/events/events.component';
+import { LoginComponent } from './administration/login/login.component';
+import { HandleNewsComponent } from './administration/handle-news/handle-news.component';
+import { LocalStorageService } from './services/local-storage.service';
+import { HandleEventsComponent } from './administration/handle-events/handle-events.component';
+import { UpdatePasswordComponent } from './administration/update-password/update-password.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +17,10 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'news', component: NewsComponent },
   { path: 'events', component: EventsComponent },
+  { path: 'administration/login', component: LoginComponent },
+  { path: 'administration/news', canActivate: [LocalStorageService], component: HandleNewsComponent },
+  { path: 'administration/events', canActivate: [LocalStorageService], component: HandleEventsComponent },
+  { path: 'administration/update/password', canActivate: [LocalStorageService], component: UpdatePasswordComponent },
 ];
 
 @NgModule({

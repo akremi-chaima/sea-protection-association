@@ -14,6 +14,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { NewsListComponent } from './common/news-list/news-list.component';
 import { EventsListComponent } from './common/events-list/events-list.component';
+import { LoginComponent } from './administration/login/login.component';
+import { HandleNewsComponent } from './administration/handle-news/handle-news.component';
+import { HandleEventsComponent } from './administration/handle-events/handle-events.component';
+import { UpdatePasswordComponent } from './administration/update-password/update-password.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { EventsListComponent } from './common/events-list/events-list.component'
     EventsListComponent,
     NewsComponent,
     EventsComponent,
+    LoginComponent,
+    HandleNewsComponent,
+    HandleEventsComponent,
+    UpdatePasswordComponent,
   ],
     imports: [
         BrowserModule,

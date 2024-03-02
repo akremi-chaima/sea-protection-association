@@ -16,7 +16,7 @@ export class LocalStorageService implements CanActivate {
 
   save(data: LoginResponseInterface): void {
     localStorage.setItem('token', JSON.stringify(data));
-    this.router.navigate(['administration/vehicles']);
+    this.router.navigate(['administration/news']);
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {

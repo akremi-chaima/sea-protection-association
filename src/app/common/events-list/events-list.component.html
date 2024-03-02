@@ -46,7 +46,7 @@
                 <input type="email" class="form-control" name="phoneNumber" formControlName="phoneNumber" id="phoneNumber" placeholder="Entrez votre téléphone">
                 <p class="error-message" *ngIf="formSubmitted && form.controls['phoneNumber'].errors">{{ getError('phoneNumber') }}</p>
               </div>
-              <button type="submit" class="btn w-25 btn-primary" (click)="save()">Participer</button>
+              <button type="submit" class="btn btn-primary" (click)="save()">Participer</button>
             </form>
           </div>
         </div>
