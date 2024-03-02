@@ -21,7 +21,7 @@ export class LocalStorageService implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     // check if token is valid and the connected user has the access to the current route
-    if (this.checkToken() && route.data['expectedRoles'].indexOf(this.getToken().role) !== -1) {
+    if (this.checkToken()) {
       return true;
     } else {
       // logout user if he has not the access to the current route

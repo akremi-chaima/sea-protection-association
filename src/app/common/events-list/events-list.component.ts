@@ -1,22 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { EventInterface } from '../models/event.interface';
-import { ParticipantService } from '../services/participant.service';
+import {Component, Input, OnInit} from '@angular/core';
+import { EventInterface } from '../../models/event.interface';
+import { ParticipantService } from '../../services/participant.service';
 import {
   FormBuilder,
   FormControl,
   FormGroup,
   Validators
 } from '@angular/forms';
-import { ConstsHelper } from '../consts.helper';
-import { ParticipantInterface } from '../models/participant.interface';
-import { EventService } from '../services/event.service';
+import { ConstsHelper } from '../../consts.helper';
+import { ParticipantInterface } from '../../models/participant.interface';
+import { EventService } from '../../services/event.service';
 
 @Component({
-  selector: 'app-events',
-  templateUrl: './events.component.html',
-  styleUrls: ['./events.component.css']
+  selector: 'app-events-list',
+  templateUrl: './events-list.component.html',
+  styleUrls: ['./events-list.component.css']
 })
-export class EventsComponent implements OnInit {
+export class EventsListComponent implements OnInit {
+
+  @Input()
+  isPublic: boolean;
 
   events: Array<EventInterface> = [];
   selectedEvent: EventInterface | null = null;

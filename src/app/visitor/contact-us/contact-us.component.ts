@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactService } from '../services/contact.service';
+import { ContactService } from '../../services/contact.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ConstsHelper } from '../consts.helper';
-import { ContactInterface } from '../models/contact.interface';
+import { ConstsHelper } from '../../consts.helper';
+import { ContactInterface } from '../../models/contact.interface';
 
 @Component({
   selector: 'app-contact-us',
