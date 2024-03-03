@@ -1,0 +1,30 @@
+.form-card {
+  padding: 30px 30px;
+  width: 60%;
+  margin: 140px auto;
+  display: flex;
+  border-radius: 10px;
+  background: #f6f6f9;
+}
+
+.form-card form {
+  width: 100%;
+  margin: auto;
+}
+
+h5 {
+  color: cornflowerblue;
+  text-align: center;
+}
+
+.form-card p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .form-card {
+    padding: 20px 10px !important;
+    width: 100%;
+  }
+}
