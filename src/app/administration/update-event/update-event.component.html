@@ -1,0 +1,24 @@
+<div class="form-card">
+  <form [formGroup]="form" *ngIf="form">
+    <h3>Modifier un évènement</h3>
+    <div class="form-group mb-3">
+      <label class="form-label">Titre:</label>
+      <input type="text" class="form-control" formControlName="title">
+      <p class="error-message" *ngIf="formSubmitted && form.controls['title'].errors">{{ getError('title') }}</p>
+    </div>
+
+    <div class="form-group mb-3">
+      <label class="form-label">Date:</label>
+      <input type="text" class="form-control" formControlName="date" placeholder="JJ/MM/AAAA HH:MM">
+      <p class="error-message" *ngIf="formSubmitted && form.controls['date'].errors">{{ getError('date') }}</p>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="address" class="form-label"></label>
+      <input type="text" formControlName="address" id="address" class="form-control" placeholder="Adresse">
+      <p class="error-message" *ngIf="formSubmitted && form.controls['address'].errors">{{ getError('address') }}</p>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="save()">Enregistrer</button>
+  </form>
+</div>

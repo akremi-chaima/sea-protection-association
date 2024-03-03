@@ -19,6 +19,7 @@ import { HandleNewsComponent } from './administration/handle-news/handle-news.co
 import { HandleEventsComponent } from './administration/handle-events/handle-events.component';
 import { UpdatePasswordComponent } from './administration/update-password/update-password.component';
 import { AddEventComponent } from './administration/add-event/add-event.component';
+import { UpdateEventComponent } from './administration/update-event/update-event.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AddEventComponent } from './administration/add-event/add-event.componen
     HandleEventsComponent,
     UpdatePasswordComponent,
     AddEventComponent,
+    UpdateEventComponent,
   ],
     imports: [
         BrowserModule,

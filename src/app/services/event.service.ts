@@ -41,7 +41,7 @@ export class EventService {
   /**
    * Get event by id
    */
-  getOneById(eventId: number): Observable<EventInterface> {
-    return this.apiService.get<EventInterface>('private/event/' + eventId);
+  getOneById(eventId: number): Observable<HandleEventInterface> {
+    return this.apiService.get<HandleEventInterface>('private/event/' + eventId);
   }
 }
