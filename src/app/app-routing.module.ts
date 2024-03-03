@@ -13,6 +13,9 @@ import { UpdatePasswordComponent } from './administration/update-password/update
 import { AddEventComponent } from './administration/add-event/add-event.component';
 import { UpdateEventComponent } from './administration/update-event/update-event.component';
 import { DeleteEventComponent } from './administration/delete-event/delete-event.component';
+import { AddNewsComponent } from './administration/add-news/add-news.component';
+import { UpdateNewsComponent } from './administration/update-news/update-news.component';
+import { DeleteNewsComponent } from './administration/delete-news/delete-news.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,6 +30,9 @@ const routes: Routes = [
   { path: 'administration/event/create', canActivate: [LocalStorageService], component: AddEventComponent },
   { path: 'administration/event/update/:id', canActivate: [LocalStorageService], component: UpdateEventComponent },
   { path: 'administration/event/delete/:id', canActivate: [LocalStorageService], component: DeleteEventComponent },
+  { path: 'administration/news/create', canActivate: [LocalStorageService], component: AddNewsComponent },
+  { path: 'administration/news/update/:id', canActivate: [LocalStorageService], component: UpdateNewsComponent },
+  { path: 'administration/news/delete/:id', canActivate: [LocalStorageService], component: DeleteNewsComponent },
 ];
 
 @NgModule({

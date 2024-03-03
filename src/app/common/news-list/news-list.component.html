@@ -1,12 +1,20 @@
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-    <div class="col mb-3 cursor-pointer" *ngFor="let act of news" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setSelectedNews(act)">
+    <div class="col mb-3" [className]="isPublic ? 'cursor-pointer' : ''" *ngFor="let act of news" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setSelectedNews(act)">
       <div class="card text-center">
         <img class="card-header" [src]="act.picture ? environment.apiUrl + act.picture : '../../assets/images/marine.jpeg'" alt="">
         <div class="card-body">
           <h6> <strong>{{ act.title }}</strong></h6>
           <p>{{ act.description.substring(0, 100) }}...</p>
           <small class="text-body-secondary float-end">{{ act.createdAt }}</small>
+        </div>
+        <div class="buttons row" *ngIf="!isPublic">
+          <div class="col w-50">
+            <i class="bi bi-pencil cursor-pointer" (click)="navigateTo('administration/news/update/' + act.id)"></i>
+          </div>
+          <div class="col w-50">
+            <i class="bi bi-trash cursor-pointer" (click)="navigateTo('administration/news/delete/' + act.id)"></i>
+          </div>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NewsInterface } from '../../models/news.interface';
 import { NewsService } from '../../services/news.service';
 import { environment } from '../../../environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-news-list',
@@ -20,7 +21,10 @@ export class NewsListComponent implements OnInit {
   selectedNews: NewsInterface | null = null;
   environment = environment
 
-  constructor(private newsService: NewsService) {
+  constructor(
+    private newsService: NewsService,
+    private router: Router,
+  ) {
   }
 
   ngOnInit() {
@@ -32,5 +36,9 @@ export class NewsListComponent implements OnInit {
 
   setSelectedNews(news: NewsInterface) {
     this.selectedNews = news;
+  }
+
+  navigateTo(url: string) {
+    this.router.navigate([url]);
   }
 }
