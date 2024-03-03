@@ -100,5 +100,9 @@ export class UpdateEventComponent implements OnInit {
     const splitDate = splitDateTime[0].split('/');
     return splitDate[2] + '-' + splitDate[1] + '-' + splitDate[0] + ' ' + splitDateTime[1] + ':00';
   }
+
+  cancel() {
+    this.router.navigate(['administration/events']);
+  }
 }
 

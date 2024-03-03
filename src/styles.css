@@ -57,3 +57,7 @@ html {
   margin: auto;
   text-align: center !important;
 }
+
+.red-text {
+  color: #f93333 !important;
+}

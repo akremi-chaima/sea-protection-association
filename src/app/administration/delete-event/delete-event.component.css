@@ -12,10 +12,14 @@
   margin: auto;
 }
 
-h3 {
+h5 {
   color: cornflowerblue;
   text-align: center;
+}
+
+.form-card p {
   font-size: 20px;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 500px) {

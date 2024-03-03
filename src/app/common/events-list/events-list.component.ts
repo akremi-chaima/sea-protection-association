@@ -10,6 +10,7 @@ import {
 import { ConstsHelper } from '../../consts.helper';
 import { ParticipantInterface } from '../../models/participant.interface';
 import { EventService } from '../../services/event.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-events-list',
@@ -46,6 +47,7 @@ export class EventsListComponent implements OnInit {
     private participantService: ParticipantService,
     private eventService: EventService,
     private formBuilder: FormBuilder,
+    private router: Router,
   ) {
   }
 
@@ -94,5 +96,9 @@ export class EventsListComponent implements OnInit {
         }
       );
     }
+  }
+
+  navigateTo(url: string) {
+    this.router.navigate([url]);
   }
 }

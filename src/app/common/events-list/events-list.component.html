@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-    <div class="col mb-3 cursor-pointer" *ngFor="let event of events" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setSelectedEvent(event)">
+    <div class="col mb-3" [className]="isPublic ? 'cursor-pointer' : ''" *ngFor="let event of events" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setSelectedEvent(event)">
       <div class="card">
         <img class="card-header" src="../../../assets/images/ocean.jpg" alt="">
         <div class="card-body float-start">
@@ -9,13 +9,21 @@
           <div class="mb-2"><i class="bi bi-calendar3"></i>{{ event.date }}</div>
           <div class="mb-2"><i class="bi bi-file-person-fill"></i>{{ event.participants }} participants</div>
         </div>
+        <div class="buttons row">
+          <div class="col w-50">
+            <i class="bi bi-pencil cursor-pointer" (click)="navigateTo('administration/event/update/' + event.id)"></i>
+          </div>
+          <div class="col w-50">
+            <i class="bi bi-trash cursor-pointer" (click)="navigateTo('administration/event/delete/' + event.id)"></i>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf="isPublic">
   <div class="modal-dialog">
     <div class="modal-content" *ngIf="selectedEvent">
       <div class="modal-header">

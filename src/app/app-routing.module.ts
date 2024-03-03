@@ -12,6 +12,7 @@ import { HandleEventsComponent } from './administration/handle-events/handle-eve
 import { UpdatePasswordComponent } from './administration/update-password/update-password.component';
 import { AddEventComponent } from './administration/add-event/add-event.component';
 import { UpdateEventComponent } from './administration/update-event/update-event.component';
+import { DeleteEventComponent } from './administration/delete-event/delete-event.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'administration/update/password', canActivate: [LocalStorageService], component: UpdatePasswordComponent },
   { path: 'administration/event/create', canActivate: [LocalStorageService], component: AddEventComponent },
   { path: 'administration/event/update/:id', canActivate: [LocalStorageService], component: UpdateEventComponent },
+  { path: 'administration/event/delete/:id', canActivate: [LocalStorageService], component: DeleteEventComponent },
 ];
 
 @NgModule({

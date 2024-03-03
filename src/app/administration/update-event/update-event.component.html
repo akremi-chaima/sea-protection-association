@@ -19,6 +19,13 @@
       <p class="error-message" *ngIf="formSubmitted && form.controls['address'].errors">{{ getError('address') }}</p>
     </div>
 
-    <button type="submit" class="btn btn-primary" (click)="save()">Enregistrer</button>
+    <div class="row mt-3">
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary" (click)="cancel()">Annnuler</button>
+      </div>
+      <div class="col text-center">
+        <button type="submit" class="btn btn-primary" (click)="save()">Enregistrer</button>
+      </div>
+    </div>
   </form>
 </div>
