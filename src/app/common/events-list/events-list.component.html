@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-3">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
     <div class="col mb-3" [className]="isPublic ? 'cursor-pointer' : ''" *ngFor="let event of events" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setSelectedEvent(event)">
       <div class="card">
@@ -9,7 +9,7 @@
           <div class="mb-2"><i class="bi bi-calendar3"></i>{{ event.date }}</div>
           <div class="mb-2"><i class="bi bi-file-person-fill"></i>{{ event.participants }} participants</div>
         </div>
-        <div class="buttons row">
+        <div class="buttons row" *ngIf="!isPublic">
           <div class="col w-50">
             <i class="bi bi-pencil cursor-pointer" (click)="navigateTo('administration/event/update/' + event.id)"></i>
           </div>
