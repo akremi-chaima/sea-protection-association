@@ -52,6 +52,7 @@ html {
 }
 
 .btn-primary {
+  background: cornflowerblue;
   display: block;
   margin: auto;
   text-align: center !important;

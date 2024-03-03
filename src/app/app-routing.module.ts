@@ -10,6 +10,7 @@ import { HandleNewsComponent } from './administration/handle-news/handle-news.co
 import { LocalStorageService } from './services/local-storage.service';
 import { HandleEventsComponent } from './administration/handle-events/handle-events.component';
 import { UpdatePasswordComponent } from './administration/update-password/update-password.component';
+import { AddEventComponent } from './administration/add-event/add-event.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'administration/news', canActivate: [LocalStorageService], component: HandleNewsComponent },
   { path: 'administration/events', canActivate: [LocalStorageService], component: HandleEventsComponent },
   { path: 'administration/update/password', canActivate: [LocalStorageService], component: UpdatePasswordComponent },
+  { path: 'administration/event/create', canActivate: [LocalStorageService], component: AddEventComponent },
 ];
 
 @NgModule({

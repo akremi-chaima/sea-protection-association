@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-handle-events',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HandleEventsComponent {
 
+  constructor(private router: Router) {
+  }
+
+  redirect() {
+    this.router.navigate(['administration/event/create'])
+  }
 }
