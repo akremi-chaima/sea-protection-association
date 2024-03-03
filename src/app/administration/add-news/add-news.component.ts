@@ -92,5 +92,4 @@ export class AddNewsComponent implements OnInit {
     }
     $event.target.value = null;
   }
-
 }

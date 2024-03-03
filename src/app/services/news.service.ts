@@ -38,6 +38,8 @@ export class NewsService {
     } else {
       formData.append('file', null);
     }
+    // @ts-ignore
+    formData.append('id', news.id);
     formData.append('title', news.title);
     formData.append('description', news.description);
     return this.apiService.postFile('private/update/news', formData);
