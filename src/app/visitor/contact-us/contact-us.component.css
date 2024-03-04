@@ -16,3 +16,7 @@
 .cards {
   padding: 0 !important;
 }
+
+button {
+  width: 100px;
+}

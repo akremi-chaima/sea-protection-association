@@ -24,12 +24,12 @@
     </button>
   </section>
 
-  <app-about-us [hideBanner]="true"></app-about-us>
+  <app-about-us></app-about-us>
 
   <section class="background">
     <div class="row align-items-start cards">
       <h2 class="cover-title title">Responsable des petites actions vers de grands changements</h2>
-      <app-news-list [newsNumber]="3"></app-news-list>
+      <app-news-list [isPublic]="true" [newsNumber]="3"></app-news-list>
     </div>
   </section>
 </main>

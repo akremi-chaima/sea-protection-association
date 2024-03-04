@@ -9,9 +9,9 @@
 
 .bg-light {
   background-color: #fff !important;
-  border-bottom: solid 2px cornflowerblue;
+  border-bottom: solid 2px #116ee7;
   margin-bottom: 20px;
-  box-shadow: 0 4px 6px -3px cornflowerblue;
+  box-shadow: 0 4px 6px -3px #116ee7;
 }
 
 .nav-link{
@@ -21,16 +21,16 @@
 }
 
 .active {
-  color: cornflowerblue !important ;
-  border-top: solid 2px cornflowerblue;
+  color: #116ee7 !important ;
+  border-top: solid 2px #116ee7;
 }
 
 .active a{
-  color: cornflowerblue !important ;
+  color: #116ee7 !important ;
 }
 
 .nav-link:hover{
-  color: cornflowerblue;
+  color: #116ee7;
 }
 
 .navbar-brand {

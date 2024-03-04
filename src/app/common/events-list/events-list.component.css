@@ -4,13 +4,13 @@
 }
 
 .title-news {
-  color: cornflowerblue !important;
+  color: #116ee7 !important;
   font-weight: bold;
   font-size: 18px;
 }
 
 .bi {
-  color: cornflowerblue !important;
+  color: #116ee7 !important;
   font-size: 18px;
   margin-right: 10px;
 }
@@ -30,7 +30,7 @@
 .modal-title {
   text-align: center;
   width: 100%;
-  color: cornflowerblue !important;
+  color: #116ee7 !important;
   font-weight: bold;
   font-size: 20px;
 }

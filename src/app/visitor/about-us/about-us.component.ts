@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about-us',
@@ -6,6 +6,4 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent {
-  @Input()
-  hideBanner: boolean | undefined
 }

@@ -30,7 +30,15 @@ export class NewsListComponent implements OnInit {
   ngOnInit() {
     this.news = [];
     this.newsService.get().subscribe(news => {
-      this.news = news;
+      if (this.newsNumber) {
+        for (let i = 0; i < this.newsNumber; i++) {
+          if (news[i]) {
+            this.news.push(news[i])
+          }
+        }
+      } else {
+        this.news = news;
+      }
     });
   }
 

@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mb-5">
     <div class="col mb-3" [className]="isPublic ? 'cursor-pointer' : ''" *ngFor="let act of news" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setSelectedNews(act)">
       <div class="card text-center">
         <img class="card-header" [src]="act.picture ? environment.apiUrl + act.picture : '../../assets/images/marine.jpeg'" alt="">
