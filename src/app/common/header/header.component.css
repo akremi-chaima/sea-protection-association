@@ -37,6 +37,10 @@
   margin-left: 25px;
 }
 
+img {
+  width: 70px;
+}
+
 @media (max-width: 575px){
   .active {
     border-top: none;

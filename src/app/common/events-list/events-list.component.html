@@ -2,7 +2,7 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
     <div class="col mb-3" [className]="isPublic ? 'cursor-pointer' : ''" *ngFor="let event of events" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setSelectedEvent(event)">
       <div class="card">
-        <img class="card-header" src="../../../assets/images/ocean.jpg" alt="">
+        <img class="card-header" src="../../../assets/images/logo_1.png">
         <div class="card-body float-start">
           <div class="title-news mb-2">{{ event.title }}</div>
           <div class="mb-2"><i class="bi bi-pin-map-fill"></i>{{ event.address }}</div>
