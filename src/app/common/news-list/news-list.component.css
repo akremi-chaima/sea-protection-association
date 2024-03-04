@@ -25,6 +25,12 @@
   margin-top: 10px;
 }
 
+.bi {
+  color: #116ee7 !important;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
 @media (max-width: 575px){
   .modal {
     margin-top: 25%;

@@ -24,6 +24,7 @@ import { DeleteEventComponent } from './administration/delete-event/delete-event
 import { AddNewsComponent } from './administration/add-news/add-news.component';
 import { UpdateNewsComponent } from './administration/update-news/update-news.component';
 import { DeleteNewsComponent } from './administration/delete-news/delete-news.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { DeleteNewsComponent } from './administration/delete-news/delete-news.co
         AppRoutingModule,
         ReactiveFormsModule,
         HttpClientModule,
-        CommonModule
+        CommonModule,
+        CKEditorModule
     ],
   providers: [],
   bootstrap: [AppComponent]

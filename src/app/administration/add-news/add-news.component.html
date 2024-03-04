@@ -14,8 +14,8 @@
     </div>
 
     <div class="form-group mb-3">
-      <label for="description" class="form-label"></label>
-      <textarea formControlName="description" id="description" rows="8" class="form-control" placeholder="Description"></textarea>
+      <label for="description" class="form-label">Description</label>
+      <ckeditor id="description" [editor]="editor" (change)="onChange($event)"></ckeditor>
       <p class="error-message" *ngIf="formSubmitted && form.controls['description'].errors">{{ getError('description') }}</p>
     </div>
 

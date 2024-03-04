@@ -3,6 +3,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { HandleNewsInterface } from '../../models/handle-news.interface';
 import { NewsService } from '../../services/news.service';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { ChangeEvent } from '@ckeditor/ckeditor5-angular/ckeditor.component';
 
 @Component({
   selector: 'app-add-news',
@@ -11,6 +13,7 @@ import { NewsService } from '../../services/news.service';
 })
 export class AddNewsComponent implements OnInit {
 
+  public editor = ClassicEditor;
   form: FormGroup;
   control: FormControl;
   formSubmitted: boolean;
@@ -91,5 +94,9 @@ export class AddNewsComponent implements OnInit {
       this.filesUploaded.splice(Number(index), 1);
     }
     $event.target.value = null;
+  }
+
+  public onChange({ editor }: ChangeEvent) {
+    this.form.get('description').setValue(editor.data.get());
   }
 }

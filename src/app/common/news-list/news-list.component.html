@@ -5,7 +5,7 @@
         <img class="card-header" [src]="act.picture ? environment.apiUrl + act.picture : '../../assets/images/marine.jpeg'" alt="">
         <div class="card-body">
           <h6> <strong>{{ act.title }}</strong></h6>
-          <p>{{ act.description.substring(0, 100) }}...</p>
+          <p [innerHTML]="act.description.substring(0, 100)+'...'"></p>
           <small class="text-body-secondary float-end">{{ act.createdAt }}</small>
         </div>
         <div class="buttons row" *ngIf="!isPublic">
@@ -29,7 +29,7 @@
         <div class="modal-title">{{ selectedNews.title }}</div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body" [innerHTML]="selectedNews.description.replace('\n', '<br>')">
+      <div class="modal-body" [innerHTML]="selectedNews.description">
       </div>
     </div>
   </div>

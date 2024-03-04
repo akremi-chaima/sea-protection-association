@@ -4,6 +4,8 @@ import { NewsService } from '../../services/news.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HandleNewsInterface } from '../../models/handle-news.interface';
 import { NewsInterface } from '../../models/news.interface';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { ChangeEvent } from '@ckeditor/ckeditor5-angular/ckeditor.component';
 
 @Component({
   selector: 'app-update-news',
@@ -12,6 +14,7 @@ import { NewsInterface } from '../../models/news.interface';
 })
 export class UpdateNewsComponent implements OnInit {
 
+  public editor = ClassicEditor;
   form: FormGroup;
   news: NewsInterface;
   control: FormControl;
@@ -50,7 +53,7 @@ export class UpdateNewsComponent implements OnInit {
     this.control = this.formBuilder.control('', Validators.required);
     this.form = this.formBuilder.group({});
     this.form.addControl('id', this.formBuilder.control(this.news.id, [Validators.required]));
-    this.form.addControl('description', this.formBuilder.control(this.news.description, [Validators.required]));
+    this.form.addControl('description', this.formBuilder.control('', [Validators.required]));
     this.form.addControl('title', this.formBuilder.control(this.news.title, [Validators.required]));
   }
 
@@ -102,5 +105,9 @@ export class UpdateNewsComponent implements OnInit {
       this.filesUploaded.splice(Number(index), 1);
     }
     $event.target.value = null;
+  }
+
+  public onChange({ editor }: ChangeEvent) {
+    this.form.get('description').setValue(editor.data.get());
   }
 }
